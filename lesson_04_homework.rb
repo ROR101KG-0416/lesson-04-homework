@@ -17,13 +17,20 @@ def fizzbuzz(num)
     when num % 5  == 0 then "Buzz"
     #if none of the three above cases were true, then execute this line, which will just return num
     else num
+  #ending case statement
   end
+#ending method definition
 end
 
+#creating a new method 'fizz_buzz_to' that takes an argument of limit
 def fizz_buzz_to(limit)
+  #this is a loop stating that for each number from 1 up to the argument input as limit, 
+  #the code within this statement will execute
   1.upto(limit).each do |num|
+    #print the result of fizzbuzz (the method defined above) each time the loop executes
     puts fizzbuzz(num)
   end
+#ending loop and 
 end
 
 # Fix Broken Code
