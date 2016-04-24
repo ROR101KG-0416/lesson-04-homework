@@ -1,12 +1,21 @@
 # Code Reading
 
+#creating a method called fizzbuzz that takes in an argument that will be referred to as num
 def fizzbuzz(num)
   # Example comment line
 
+  #similar to an if statement, this checks for different cases and will execute if that specific 
+  #case renders true
   case
+    #if num divided by 15 has a remainder of 0, return "Fizzbuzz"
     when num % 15 == 0 then "FizzBuzz"
+    #if the first case isn't true, the method will then check num against this case, and execute if 
+    #num divided by 3 has a remainder of 0
     when num % 3  == 0 then "Fizz"
+    #if the other cases weren't true, the code will continue to check if num divided by 5 has a 
+    #remainder of 0
     when num % 5  == 0 then "Buzz"
+    #if none of the three above cases were true, then execute this line, which will just return num
     else num
   end
 end
