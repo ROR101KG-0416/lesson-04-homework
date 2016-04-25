@@ -34,6 +34,14 @@
 
 # Fix Broken Code
 
+  def area_of_triangle(b, h)
+    puts b * h / 2
+  end
+
+  base = 7
+  height = 6
+
+  puts area_of_triangle(base, height)
 
 
 # Coding
