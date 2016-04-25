@@ -47,9 +47,32 @@
 # Coding
 
 class Waitlist
-  # add your code here
-end
 
+  def initialize(parties)
+    @list = parties
+  end  
+
+  def add_party(name)
+    @list.push(name)
+  end
+
+  def print_list
+    i = 1
+
+    @list.each do |name|
+      puts "#{i} #{name}"
+      
+      i += 1
+    end
+  end
+
+  def seat
+    puts "Party that was seated: #{@list[0]}"
+
+    @list.shift
+  end  
+
+end
 
 # test case
 parties = ['customer_one', 'customer_two', 'customer_three' ]
@@ -57,10 +80,15 @@ parties = ['customer_one', 'customer_two', 'customer_three' ]
 waitlist = Waitlist.new(parties)
 
 # List your parties
-waitlist.list
+waitlist.print_list
+puts ' '
 
 # Add a new party
 waitlist.add_party('customer_four')
+waitlist.print_list
+puts ' '
 
 # seat the party first in the list
 waitlist.seat
+puts ' '
+waitlist.print_list
