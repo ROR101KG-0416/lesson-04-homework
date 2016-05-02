@@ -51,6 +51,7 @@ class Waitlist
 
   def add_party(i)
     parties << i
+    parties.last
   end
 
   def seat
