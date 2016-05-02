@@ -35,7 +35,7 @@
 # Fix Broken Code
 
   def area_of_triangle(b, h)
-    puts b * h / 2
+    b * h / 2
   end
 
   base = 7
@@ -56,14 +56,8 @@ class Waitlist
     @list.push(name)
   end
 
-  def print_list
-    i = 1
-
-    @list.each do |name|
-      puts "#{i} #{name}"
-      
-      i += 1
-    end
+  def list
+    @list
   end
 
   def seat
@@ -80,15 +74,15 @@ parties = ['customer_one', 'customer_two', 'customer_three' ]
 waitlist = Waitlist.new(parties)
 
 # List your parties
-waitlist.print_list
+puts waitlist.list
 puts ' '
 
 # Add a new party
 waitlist.add_party('customer_four')
-waitlist.print_list
+puts waitlist.list
 puts ' '
 
 # seat the party first in the list
 waitlist.seat
 puts ' '
-waitlist.print_list
+puts waitlist.list
