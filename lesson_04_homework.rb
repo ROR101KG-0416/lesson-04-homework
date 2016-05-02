@@ -30,24 +30,45 @@ def fizz_buzz_to(limit)
     #print the result of fizzbuzz (the method defined above) each time the loop executes
     puts fizzbuzz(num)
   end
-#ending loop and 
+#ended loop, ending method definition
 end
 
 # Fix Broken Code
 
-def area_of_triangle(b, h)
-  puts b x height / 2
+def area_of_triangle(base, height)
+  (base * height) / 2
 end
 
+#these could be named anything, don't need to be named the same as the arguments in the method
 base = 7
 height = 6
 
-puts area_of_triangle(height, height)
+# puts area_of_triangle(base, height)
 
-# Coding
+
+#Coding
 
 class Waitlist
   # add your code here
+  attr_accessor :parties
+  def initialize(parties)
+    @parties = parties
+  end
+
+  def add_party(party)
+    parties.push(party)
+    party
+  end
+
+  def list
+    parties.each { |party| puts party}
+  end
+
+  def seat
+    seated_party = parties[0]
+    parties.shift
+    seated_party
+  end
 end
 
 
@@ -60,7 +81,8 @@ waitlist = Waitlist.new(parties)
 waitlist.list
 
 # Add a new party
-waitlist.add_party('customer_four')
+puts waitlist.add_party('customer_four')
 
 # seat the party first in the list
-waitlist.seat
+puts waitlist.seat
+
