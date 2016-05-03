@@ -42,15 +42,15 @@ puts area_of_triangle(base, height)
 
 class Waitlist
   def initialize(parties)
-  @parties = parties 
+    @parties = parties 
   end
  
   def list
-  parties  
+    @parties  
   end  
 
   def add_party(i)
-    parties <<
+    parties << i
   end
   
   def seat
